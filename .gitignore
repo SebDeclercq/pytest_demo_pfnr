@@ -2,3 +2,5 @@
 BIBLIO_SUPPORT.csv
 .coverage
 htmlcov/
+.pytest_cache/
+.vscode/
