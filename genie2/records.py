@@ -12,7 +12,9 @@ from typing import List
 
 @dataclass
 class File:
-    pass
+    numdosvl: str
+    format: str
+    verling: str
 
 
 @dataclass

@@ -8,7 +8,7 @@
 '''
 from typing import Dict, Union
 from _pytest.monkeypatch import MonkeyPatch
-from genie2.records import Standard
+from genie2.records import File, Standard
 import genie2
 
 
@@ -24,3 +24,15 @@ class TestStandard:
         for attr, val in data.items():
             assert getattr(std, attr) == val
         assert std.files == []
+
+
+class TestFile:
+    def test_init(self) -> None:
+        data: Dict[str, str] = {
+            'numdosvl': 'XS126450',
+            'format': 'PDFC',
+            'verling': 'F',
+        }
+        file_: File = File(**data)
+        for attr, val in data.items():
+            assert getattr(file_, attr) == val
