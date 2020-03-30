@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 '''
-@desc    description
+@desc    Testing the classes in genie2.records
 @author  SDQ <sdq@afnor.org>
-@version 0.0.1
-@date    2020-03-27
+@version 1.0.0
+@date    2020-03-30
 @note    0.0.1 (2020-03-27) : Init file
+@note    1.0.0 (2020-03-30) : OK
 '''
 from typing import Dict, Union
 from _pytest.monkeypatch import MonkeyPatch
