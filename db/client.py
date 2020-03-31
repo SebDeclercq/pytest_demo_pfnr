@@ -31,6 +31,7 @@ class DbClient:
         self, exc_type: type, exc_value: Exception, traceback: traceback
     ) -> None:
         '''Exit behaviour'''
+        self._connection.commit()
         self._connection.close()
 
     def __getattr__(self, attr: str) -> Any:
@@ -38,6 +39,9 @@ class DbClient:
         is not part of the DbClient object'''
         if attr not in dir(self):
             return getattr(self._connection.cursor(), attr)
+
+    def commit(self) -> None:
+        self._connection.commit()
 
     @property
     def is_connected(self) -> bool:
